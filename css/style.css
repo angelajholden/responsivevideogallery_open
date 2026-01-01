@@ -381,27 +381,27 @@ a:active {
 }
 
 @media (max-width: 1024px) {
-	.social_navigation {
+	.navigation .social_navigation {
 		width: 100%;
 	}
 
-	.social_nav {
+	.navigation .social_nav {
 		gap: 0;
 	}
 
-	.social_nav a:focus,
-	.social_nav a:hover,
-	.social_nav a:active {
+	.navigation .social_nav a:focus,
+	.navigation .social_nav a:hover,
+	.navigation .social_nav a:active {
 		background-color: var(--white);
 	}
 
-	.social_nav a svg {
+	.navigation .social_nav a svg {
 		fill: var(--white);
 	}
 
-	.social_nav a:focus svg,
-	.social_nav a:hover svg,
-	.social_nav a:active svg {
+	.navigation .social_nav a:focus svg,
+	.navigation .social_nav a:hover svg,
+	.navigation .social_nav a:active svg {
 		fill: var(--black);
 	}
 }
@@ -435,6 +435,30 @@ a:active {
 	object-fit: cover;
 }
 
+.video_title {
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+	.gallery_section .wrap {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.gallery_section .wrap {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.gallery_section .wrap {
+		grid-template-columns: 1fr;
+	}
+}
+
 /* Content Sections */
 .dark_section {
 	background-color: var(--lt-gray);
@@ -458,7 +482,7 @@ a:active {
 .dark_section p,
 .light_section p {
 	margin: 0 0 2rem;
-	font-size: 1.25rem;
+	font-size: clamp(1rem, 2vw, 1.25rem);
 	line-height: 1.85;
 }
 
@@ -473,4 +497,10 @@ a:active {
 	justify-content: space-between;
 	align-items: center;
 	font-weight: 400;
+}
+
+@media (max-width: 768px) {
+	.footer .wrap {
+		flex-direction: column;
+	}
 }
